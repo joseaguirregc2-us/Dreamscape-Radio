@@ -784,14 +784,9 @@ export default function App() {
               <span className="hidden leading-none sm:block text-[10.5px] text-slate-400 font-sans font-medium">
                 @{userProfile.username}
               </span>
-              <button
-                onClick={() => signOut(auth)}
-                className="p-1 px-1.5 rounded-md hover:bg-red-500/10 text-slate-500 hover:text-red-400 border border-transparent hover:border-red-500/10 transition-all duration-300 ml-1 cursor-pointer flex items-center gap-1 text-[9px] font-mono uppercase"
-                title="Cerrar sesión"
-              >
-                <LogOut size={11} />
-                <span className="hidden sm:inline">Salir</span>
-              </button>
+              <div className="flex items-center gap-1 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20 text-cyan-400 font-mono text-[8px] uppercase tracking-wider font-semibold">
+                Acceso Libre
+              </div>
             </div>
           </div>
         </header>
