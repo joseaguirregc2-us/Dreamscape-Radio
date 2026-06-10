@@ -1,0 +1,8 @@
+{
+  "name": "Dreamscape Radio AI",
+  "description": "Plataforma de radio inteligente impulsada por IA, especializada en Techno Chill, Ambient Techno, Deep Techno y Organic House con sintetizadores procedurales, mezclador de ambientes y asistente musical integrado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

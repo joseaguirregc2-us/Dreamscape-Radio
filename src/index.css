@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Fluid high contrast cyberpunk background gradients matching Sleek Interface */
+body {
+  background-color: #050608;
+  background-image: 
+    radial-gradient(circle at 75% 20%, rgba(30, 27, 75, 0.4) 0%, transparent 55%),
+    radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.02) 0%, transparent 40%);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Theme accent states for Sleek Interface */
+.sleek-card {
+  background-color: #0a0b10;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* border-white/5 */
+  border-radius: 1rem;
+}
+
+.sleek-card-glow {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
+}
+
+.sleek-pill {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  transition: all 0.2s ease-in-out;
+}
+
+.sleek-pill:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sleek-pill-active {
+  background-color: #22d3ee; /* cyan-400 */
+  border-color: #22d3ee;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Animations for dynamic popups */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 16s linear infinite;
+}
+
+@keyframes floatUpAndFadeSideToSide {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.4) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+    transform: translateY(-25px) translateX(-5px) scale(1.2) rotate(-8deg);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateY(-90px) translateX(8px) scale(1.0) rotate(8deg);
+  }
+  100% {
+    transform: translateY(-260px) translateX(-12px) scale(0.5) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-emoji {
+  animation: floatUpAndFadeSideToSide 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
